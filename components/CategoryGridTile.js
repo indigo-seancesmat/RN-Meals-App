@@ -35,7 +35,9 @@ const styles = StyleSheet.create({
     margin: 15,
     height: 150,
     borderRadius: 10,
-    overflow: "hidden"
+    elevation: 10,
+    overflow:
+      Platform.OS === "andoird" && Platform.Version >= 21 ? "hidden" : "visible"
   },
   container: {
     flex: 1,
@@ -44,9 +46,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.6,
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 10,
-    elevation: 6,
     padding: 15,
-
     alignItems: "flex-end",
     justifyContent: "flex-end"
   },
